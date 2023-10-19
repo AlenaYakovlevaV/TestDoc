@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+$bgMainPage: rgba(235, 235, 235, 0.5);
+$bgBtnColor: rgb(92, 92, 92);
+$btnColor: rgb(255, 255, 255);
+$btnBgActive: rgb(73, 73, 73);
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 50%;
+  padding: 1rem;
+}
+
+h1, h2 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  background-color: $bgMainPage;
+}
+
+.btn__main {
+  width: 100px;
+  line-height: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $bgBtnColor;
+  border: none;
+  border-radius: 5px;
+  color: $btnColor;
+}
+
+button:active {
+  background-color: $btnBgActive;
+  transform: translateY(2px);
+  transition: .1s ease-in-out;
+}
+
+.btn-action {
+  width: 30px;
+}
+
+.btn-unwrap {
+  margin-right: .2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 3rem;
+
+  li {
+    position: relative;
+    margin-left: .5rem;
+  }
+
+  li::before {
+    content: "";
+    border-left: 1px solid grey;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -50px;
+  }
+
+  li::after {
+    content: "";
+    border-bottom: 1px solid grey;
+    position: absolute;
+    left: -50px;
+    top: 15px;
+    width: 20px;
+  }
+}

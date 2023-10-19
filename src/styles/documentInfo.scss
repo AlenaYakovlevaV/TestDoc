@@ -1,0 +1,20 @@
+.document__info {
+  div {
+    margin-bottom: 1rem;
+    
+
+    span {
+      display: inline-block;
+      width: 25%;
+    }
+
+    .document__title {
+      font-weight: bold;
+      margin-right: 50px;
+    }
+
+    .document__value {
+      border-bottom: 1px solid grey;
+    }
+  }
+}
