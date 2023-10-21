@@ -1,0 +1,14 @@
+button:active {
+  background-color: rgb(126, 126, 126);
+  transform: translateY(2px);
+  transition: .1s ease-in-out;
+}
+
+.btn-action {
+  width: 30px;
+  margin-right: .2rem;
+}
+
+.btn-right {
+  margin-right: 1rem;
+}

@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import { MainPage } from './components/Pages/MainPage';
 
 function App() {
+  const [docInfo, setData] = React.useState([]);
+  const [tasksTree, setTasksTree] = React.useState([]);
+
+  React.useEffect(() => {
+    const data = require("./api/response.json");
+    setData(data.data.documentInfo);
+    setTasksTree(data.data.tasksTreeItems);
+  }, [docInfo, tasksTree]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainPage docInfo={docInfo} tasksTree={tasksTree} />
     </div>
   );
 }
